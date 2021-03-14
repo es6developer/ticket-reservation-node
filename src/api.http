@@ -1,0 +1,42 @@
+// Login User
+POST http://localhost:8080/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "mobile": "9994810451",
+    "password": "karthik@132"
+}
+
+// Register User
+###
+POST http://localhost:8080/  HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Karthik",
+    "gender":"Male",
+    "mobile_number": "9994810451",
+    "password": "karthik@132"
+}
+
+// Create new train
+###
+POST http://localhost:8080/train HTTP/1.1
+content-type: application/json
+
+{
+    "train_name":"SBC FEST SPL [BAN-CHE]",
+    "train_number":"07249",
+    "start_point":"Chennai",
+    "end_point":"Bangalore",
+    "total_seats":12,
+    "from_time":"13:55 PM",
+    "to_time":"21:20 PM",
+    "cost":386
+}
+
+//
+###
+GET http://localhost:8080/train/autocomplete?type=start&text=c HTTP/1.1
+content-type: application/json
+
